@@ -1,8 +1,7 @@
-# Session 5 – Test Cases and code understanding
-## time_it implementation using *args and **kwargs
-### def time_it(fn, *args, repetitons= 1, **kwargs): 
-The repetitons indicate the number of times the function has to be calculated.
-## It has these functions defined:
+# Session 6 – Test Cases and code understanding
+## poker rules to determine if player 1 or player 2 wins
+### Question 1 : To create deck of cards using lambda, zip and map
+### Question 2 : To create deck of cards as a normal function without using lambda, zip and map
 1)  polygon_area : Calculates the area of polygon (sides can be 3 to 6). We have calculated the area of a regular polygon – having all the sides equal. The input is the side length and the number of sides. 
 2)  temp_converter : Converts Celsius to Fahrenheit and Fahrenheit to Celsius. The input is the temperature and the unit of the temperature given.
 3)  print : It prints the value of the input given in args with a specified separator and end.
@@ -43,7 +42,3 @@ The repetitons indicate the number of times the function has to be calculated.
 32) squared_power_list positional argument must be a number
 33) Testing squared_power_list for list
 34) squared_power_list start must be lesser than end
-
-lambda
-zip
-map
