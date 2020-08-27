@@ -1,12 +1,8 @@
-# Session 6 – Test Cases and code understanding
-## poker rules to determine if player 1 or player 2 wins
+# Session 6 – Test Cases and code understanding : Poker rules to determine if player 1 or player 2 wins
 ### Question 1 : To create deck of cards using lambda, zip and map
+Here we have used lambda and map functions to create a deck of 52 cards
 ### Question 2 : To create deck of cards as a normal function without using lambda, zip and map
-1)  polygon_area : Calculates the area of polygon (sides can be 3 to 6). We have calculated the area of a regular polygon – having all the sides equal. The input is the side length and the number of sides. 
-2)  temp_converter : Converts Celsius to Fahrenheit and Fahrenheit to Celsius. The input is the temperature and the unit of the temperature given.
-3)  print : It prints the value of the input given in args with a specified separator and end.
-4)  squared_power_list : It generates a list by calculating the power of the given number. For example, if 2 is the number we are calculating power of and with start = 0 and end = 5 we get the result as [1, 2, 4, 8, 16, 32].
-5)  speed_converter : It converts the given speed in km/hr to different metrics. Here, distance can be km or m or ft or yrd and time can be ms or s or min or hr or day.
+Here we have used list comprehension to create a deck of 52 cards
 ## Test Cases
 1)  README exists
 2)  README has at least 500 words
@@ -14,31 +10,40 @@
 4)  README file formatting 
 5)  Code Indentation and spaces
 6)  Function name should be in small letters
-7)  All the above 5 functions used
-8)  Repetitions in time_it function should be greater than or equal to 1
-9)  fn in time_it should be any of the 5 functions used above 
-10) polygon_area must have one positional argument
-11) temp_converter must have one positional argument
-12) speed_converter must have one positional argument
-13) squared_power_list must have one positional argument
-14) polygon_area must have one named argument
-15) temp_converter must have one named argument
-16) speed_converter must have two named arguments
-17) squared_power_list must have two named arguments
-18) polygon_area must have sides as named argument
-19) polygon_area named argument must be an integer between 3 and 6
-20) polygon_area positional argument must be a number greater than 0
-21) Testing polygon_area for equilateral triangle, square, regular pentagon and regular hexagon
-22) temp_converter must have temp_given_in as named argument
-23) temp_converter named argument must be a string ‘f’ or ‘F’ or ‘c’ or ‘C’
-24) temp_converter positional argument must be a number greater than absolute zero temperature (0K or -273.15°C or -459.67°F)
-25) Testing temp_converter for Celsius to Fahrenheit and Fahrenheit to Celsius conversion
-26) speed_converter must have dist and time as named argument
-27) speed_converter named argument must be a string (dist can be km or m or ft or yrd and time can be ms or s or min or hr or day)
-28) speed_converter positional argument must be a number greater than 0
-29) Testing speed_converter for speed conversion
-30) squared_power_list must have start and end as named argument
-31) squared_power_list named argument must be numbers
-32) squared_power_list positional argument must be a number
-33) Testing squared_power_list for list
-34) squared_power_list start must be lesser than end
+7)  If in question 1, keywords are used
+8)  If there are only 52 cards in the deck created using the above method
+9)  If the 52 cards are unique and no repetition 
+10) Manual check if the cards are matching with the deck of 52 cards
+11) If in question 2, keywords are not used
+12) If there are only 52 cards in the deck created using the above method
+13) If the 52 cards are unique and no repetition 
+14) Manual check if the cards are matching with the deck of 52 cards
+15) Checking if the both the players have got only 3 or 4 or 5 cards
+16) Checking if both the players have got equal number of cards
+17) Since only one deck of cards is allowed, the cards distributed to players must be unique and among both players also, the cards must be unique
+18) Check if docstrings are available for the functions used in question 2 and question 3
+19) Check if annotations are available for the function used in question 3 and if the annotation has a return mentioned
+20) Check if the correct winner is returned for the particular hand. 20 such combination of hands are tested 
+### Poker rules and determining the winner : 
+Below is the explanation of rules considered for 3 or 4 or 5 cards : 
+1)  FLUSH : If all the cards are from the same suit, then it is a flush 
+2)  STRAIGHT : Now, based on the values it can be checked if it is a straight flush or royal flush. A dictionary is created and values are assigned to values of cards. In the beginning, ace is assigned a value of 14. If it is a straight and If the card 2 is present in a player’s hand, then the value of ace is considered to be 1
+3)  FOUR OF A KIND : Four of a kind is applicable if the number of cards of a particular hand is greater than 3. If we get all the cards of a same value for 4 cards or if we get 4 cards of same value for 5 cards then it is four of a kind
+4)  THREE OF A KIND : Three of a kind is applicable for 3 or 4 or 5 cards. If all three are of same value in 3 cards or if 3 are of same value in 4 and 5 cards, then it is considered as three of a kind
+5)  TWO PAIR : Applicable only for 4 or 5 cards. If two pairs have the same value, then it is a two pair
+6)  ONE PAIR : If there is one pair, that is two cards with the same value, then it is one pair
+7)  FULL HOUSE : Applicable for 5 cards. If 3 cards have the same value and 2 cards have the same value, then it is a full house.
+Order : 
+Royal Flush 
+Straight Flush
+Four of a kind
+Full house
+Flush
+Straight
+Three of a kind
+Two pair
+One pair
+Any other combination
+
+8)  ANY COMBINATION : For any combination, each card among the two players are considered, using the dictionary and the player with highest card wins. If all the cards are of same value, then the pot is split
+The function returns 2, if player 2 wins; 1, if player 1 wins and 0, if pot is split.
