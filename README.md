@@ -33,7 +33,7 @@ Below is the explanation of rules considered for 3 or 4 or 5 cards :
 5)  TWO PAIR : Applicable only for 4 or 5 cards. If two pairs have the same value, then it is a two pair
 6)  ONE PAIR : If there is one pair, that is two cards with the same value, then it is one pair
 7)  FULL HOUSE : Applicable for 5 cards. If 3 cards have the same value and 2 cards have the same value, then it is a full house.
-Order : 
+### Order : 
 Royal Flush 
 Straight Flush
 Four of a kind
@@ -46,4 +46,4 @@ One pair
 Any other combination
 
 8)  ANY COMBINATION : For any combination, each card among the two players are considered, using the dictionary and the player with highest card wins. If all the cards are of same value, then the pot is split
-The function returns 2, if player 2 wins; 1, if player 1 wins and 0, if pot is split.
+### The function returns 2, if player 2 wins; 1, if player 1 wins and 0, if pot is split.
